@@ -9,6 +9,16 @@
 
 <body>
 
+
+  <nav class="navbar">
+    <h2 class="logo-text">Recetario AR</h2>
+    <ul>
+      <li><a href="#recetas">Recetas</a></li>
+      <li><a href="#buscador">Buscar</a></li>
+      <li><a href="#footer">Contacto</a></li>
+    </ul>
+  </nav>
+
   <!-- ============================= -->
   <!--           HERO                -->
   <!-- ============================= -->
@@ -20,6 +30,12 @@
     </div>
   </header>
 
+
+  <!--          BUSCADOR            -->
+  <section class="search-section" id="buscador">
+    <h2>Buscar recetas</h2>
+    <input type="text" id="searchInput" placeholder="Escribe el nombre de una receta...">
+  </section>
 
   <!-- ============================= -->
   <!--        CONTENEDOR             -->
@@ -33,7 +49,7 @@
 
       <!-- Empanadas -->
       <article class="card">
-        <img src="img/empa.jpg" alt="Empanadas argentinas de carne">
+        <img src="img/empa.jpg" data-title="Empanadas argentinas de carne">
         <h3>Empanadas argentinas de carne</h3>
 
         <details>
@@ -59,7 +75,7 @@
 
       <!-- Milanesa -->
       <article class="card">
-        <img src="img/mila.jpg" alt="Milanesa a la napolitana">
+        <img src="img/mila.jpg" data-title="Milanesa a la napolitana">
         <h3>Milanesa a la napolitana</h3>
 
         <details>
@@ -84,7 +100,7 @@
 
       <!-- Choripan -->
       <article class="card">
-        <img src="img/chori.jpg" alt="Choripán">
+        <img src="img/chori.jpg" data-title="Choripán">
         <h3>Choripán</h3>
 
         <details>
@@ -108,7 +124,7 @@
 
       <!-- Matambre -->
       <article class="card">
-        <img src="img/mata.jpg" alt="Matambre a la pizza">
+        <img src="img/mata.jpg" data-title="Matambre a la pizza">
         <h3>Matambre a la pizza</h3>
 
         <details>
@@ -133,7 +149,7 @@
 
       <!-- Pastel de papas -->
       <article class="card">
-        <img src="img/paste.jpg" alt="Pastel de papas">
+        <img src="img/paste.jpg" data-title="Pastel de papas">
         <h3>Pastel de papas</h3>
 
         <details>
@@ -158,7 +174,7 @@
 
       <!-- Vacio -->
       <article class="card">
-        <img src="img/vacio.jpg" alt="Vacío de ternera">
+        <img src="img/vacio.jpg" data-title="Vacío de ternera">
         <h3>Vacío de ternera a la plancha</h3>
 
         <details>
@@ -182,7 +198,7 @@
 
       <!-- Sorrentinos -->
       <article class="card">
-        <img src="img/serre.jpg" alt="Sorrentinos">
+        <img src="img/serre.jpg" data-title="Sorrentinos">
         <h3>Sorrentinos de jamón y queso</h3>
 
         <details>
@@ -206,7 +222,7 @@
 
       <!-- Bifes -->
       <article class="card">
-        <img src="img/bifes.jpg" alt="Bifes a la criolla">
+        <img src="img/bifes.jpg" data-title="Bifes a la criolla">
         <h3>Bifes a la criolla</h3>
 
         <details>
@@ -230,7 +246,7 @@
 
       <!-- Provoleta -->
       <article class="card">
-        <img src="img/provo.jpg" alt="Provoleta">
+        <img src="img/provo.jpg" data-title="Provoleta">
         <h3>Provoleta</h3>
 
         <details>
@@ -253,7 +269,7 @@
 
       <!-- Chimichurri -->
       <article class="card">
-        <img src="img/chimi.jpg" alt="Chimichurri">
+        <img src="img/chimi.jpg" data-title="Chimichurri">
         <h3>Chimichurri</h3>
 
         <details>
@@ -277,7 +293,7 @@
 
       <!-- Entraña -->
       <article class="card">
-        <img src="img/entraña.jpg" alt="Entraña con chimichurri">
+        <img src="img/entraña.jpg" data-title="Entraña con chimichurri">
         <h3>Entraña con chimichurri</h3>
 
         <details>
@@ -300,7 +316,7 @@
 
       <!-- Locro -->
       <article class="card">
-        <img src="img/locro.jpg" alt="Locro argentino">
+        <img src="img/locro.jpg" data-title="Locro argentino">
         <h3>Locro argentino</h3>
 
         <details>
@@ -323,7 +339,7 @@
 
       <!-- Alfajores -->
       <article class="card">
-        <img src="img/alfa.jpg" alt="Alfajores de maicena">
+        <img src="img/alfa.jpg" data-title="Alfajores de maicena">
         <h3>Alfajores de maicena</h3>
 
         <details>
@@ -346,7 +362,7 @@
 
       <!-- Chocotorta -->
       <article class="card">
-        <img src="img/choco.jpg" alt="Chocotorta">
+        <img src="img/choco.jpg" data-title="Chocotorta">
         <h3>Chocotorta</h3>
 
         <details>
@@ -369,7 +385,7 @@
 
       <!-- Panqueques -->
       <article class="card">
-        <img src="img/pan.jpg" alt="Panqueques">
+        <img src="img/pan.jpg" data-title="Panqueques">
         <h3>Panqueques con dulce de leche</h3>
 
         <details>
@@ -393,7 +409,7 @@
 
       <!-- Dulce de leche -->
       <article class="card">
-        <img src="img/leche.jpg" alt="Dulce de leche casero">
+        <img src="img/leche.jpg" data-title="Dulce de leche casero">
         <h3>Dulce de leche casero</h3>
 
         <details>
@@ -416,7 +432,7 @@
 
       <!-- Asado -->
       <article class="card">
-        <img src="img/asado.jpg" alt="Asado de tira">
+        <img src="img/asado.jpg" data-title="Asado de tira">
         <h3>Asado de tira a la plancha</h3>
 
         <details>
@@ -438,6 +454,29 @@
 
     </main>
   </div>
+
+  <!--            FOOTER             -->
+  <footer id="footer">
+    <p>© 2025 Recetario Argentino — Todos los derechos reservados.</p>
+  </footer>
+
+  <!--         SCRIPT BUSCADOR      -->
+  <script>
+  const searchInput = document.getElementById("searchInput");
+  const cards = document.querySelectorAll(".card");
+
+  searchInput.addEventListener("input", function () {
+    const value = this.value.toLowerCase();
+
+    cards.forEach(card => {
+      const title = card.querySelector("img").dataset.title.toLowerCase();
+      card.style.display = title.includes(value) ? "block" : "none";
+    });
+  });
+</script>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
