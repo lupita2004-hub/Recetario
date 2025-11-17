@@ -16,7 +16,7 @@ body {
   line-height: 1.6;
 
   /* Fondo degradado pastel azul + morado pastel animado */
-  background: linear-gradient(120deg, #b6d7f7, #d3b8f7, #c7e0ff);
+  background: linear-gradient(120deg, #cfd5db, #d0c9da, #e2e8f0);
   background-size: 300% 300%;
   animation: gradientMove 18s ease infinite, fadeIn 1.2s ease forwards;
 
@@ -124,7 +124,9 @@ header .lead {
   backdrop-filter: blur(6px);
   padding-bottom: 10px;
   cursor: pointer;
+  
 }
+
 
 /* Hover zoom suave */
 .card:hover {
@@ -194,4 +196,109 @@ header .lead {
     height: 70px;
     font-size: 1.6rem;
   }
+}
+
+.navbar {
+  width: 100%;
+  padding: 15px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  backdrop-filter: blur(8px);
+  background: rgba(255,255,255,0.25);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.navbar .logo-text {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  opacity: 0.7;
+}
+.hero {
+  height: 55vh;
+  background: url("img/comida2.png") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: white;
+  padding-top: 60px;
+}
+
+.hero-content {
+  animation: fadeUp 1.2s ease forwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-top: 10px;
+}
+
+.search-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.search-section input {
+  width: 80%;
+  max-width: 450px;
+  padding: 14px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+
+  transition: box-shadow 0.3s;
+}
+
+.search-section input:focus {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(6px);
+  margin-top: 50px;
+  color: #ffffff;
+  font-weight: 600;
 }
