@@ -1,0 +1,197 @@
+/* =========================================================
+   TIPOGRAFÍA Y BASE
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #2c2c2c;
+  line-height: 1.6;
+
+  /* Fondo degradado pastel azul + morado pastel animado */
+  background: linear-gradient(120deg, #b6d7f7, #d3b8f7, #c7e0ff);
+  background-size: 300% 300%;
+  animation: gradientMove 18s ease infinite, fadeIn 1.2s ease forwards;
+
+  opacity: 0;
+}
+
+/* Animación del degradado — suave */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* Fade In */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* =========================================================
+   CONTENEDOR GENERAL
+========================================================= */
+
+.container {
+  width: 90%;
+  max-width: 1350px;
+  margin: auto;
+  padding: 40px 0 80px;
+}
+
+/* =========================================================
+   HEADER / TÍTULO PRINCIPAL
+========================================================= */
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+header .lead {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Logo AR */
+.logo {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(10px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 15px;
+
+  font-size: 2rem;
+  color: #ffffff;
+  font-weight: 700;
+
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* =========================================================
+   GRID DE TARJETAS
+========================================================= */
+
+.grid {
+  margin-top: 30px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 35px;
+}
+
+/* =========================================================
+   TARJETAS DE RECETAS
+========================================================= */
+
+.card {
+  background: rgba(255,255,255,0.92);
+  border-radius: 18px;
+  overflow: hidden;
+
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+
+  backdrop-filter: blur(6px);
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+
+/* Hover zoom suave */
+.card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 10px 35px rgba(0,0,0,0.25);
+}
+
+/* Imagen */
+.card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card:hover img {
+  transform: scale(1.08);
+}
+
+/* Título */
+.card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 18px 20px;
+}
+
+/* Details */
+.card details {
+  margin: 8px 20px;
+  padding: 10px 15px;
+  background: rgba(240,240,255,0.7);
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.card details[open] {
+  background: #ffffff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card summary {
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Listas */
+.card ul, .card ol {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.card li {
+  margin-bottom: 6px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 700px) {
+  header h1 {
+    font-size: 2.3rem;
+  }
+  .logo {
+    width: 70px;
+    height: 70px;
+    font-size: 1.6rem;
+  }
+}
